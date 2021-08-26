@@ -19,7 +19,7 @@ $media-width-section: 85vw;
   width: 61vw;
   margin: auto;
   @media (max-width: 321px) {
-    width: 80vw;
+    width: 100vw;
   }
 }
 .blueTitle {
@@ -526,6 +526,10 @@ input::-webkit-input-placeholder {
   @media (max-width: 950px) {
     width: 162.25px;
     height: 167.03px;
+  }
+  @media (max-width: 321px) {
+    width: 152.25px;
+    height: 157.03px;
   }
 }
 

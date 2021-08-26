@@ -2,8 +2,13 @@ $primary-color: #ffffff;
 $secondary-color: #828282;
 $third-color: #181719;
 $gray-1: #333333;
+
+$color: #ffffff;
+
 html{
     background-color: white;
+
+
 }
 
 .header{
@@ -26,6 +31,7 @@ html{
     margin-top: 0.8rem;
     font-size: 24px;
 line-height: 35px;
+
     }
 }
 .listOverview {
@@ -37,8 +43,8 @@ line-height: 35px;
       position: absolute;
       top: 0;
       right: 0;
-      background-color: $primary-color;
-      height: 100%;
+      background-color: $color;
+      height: 110%;
       width: 100%;
       margin: 0;
       padding: 0;
@@ -53,11 +59,10 @@ line-height: 35px;
     &Open {
       @extend .listOverview;
       transform: translateX(0%);
-      overflow-y: hidden;
+      
     }
     .list {
       float: left;
-  
       .navLink {
         display: block;
         color: $third-color;

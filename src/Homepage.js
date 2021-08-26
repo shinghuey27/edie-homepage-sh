@@ -47,10 +47,10 @@ const Images = [
     name: "Juice product homepage",
   },
 ];
-const Homepage = () => {
+const Homepage = (props) => {
   return (
     <div>
-      <section className={styles.sectionHome}>
+      <section id="home"className={styles.sectionHome}>
         <div className={styles.marginLeft}>
           <div className={styles.blueTitle}>Unhappy with your website?</div>
           <p className={styles.intro1}>
@@ -86,8 +86,8 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className={styles.sectionServices}>
+      </section>   
+      <section id="service" className={styles.sectionServices}>
         <h1 className={styles.serviceTitle}>We offer high demand services </h1>
         <div className={styles.serviceOverview}>
           {Data.map((data) => (
@@ -104,7 +104,7 @@ const Homepage = () => {
           ))}
         </div>
       </section>
-      <section className={styles.sectionWorks}>
+      <section id="work"className={styles.sectionWorks}>
         <h1 className={styles.workTitle}>Good design means good business</h1>
 
         <div className={styles.gridImage}>
@@ -123,7 +123,7 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section className={styles.sectionTeams}>
+      <section id="team"className={styles.sectionTeams}>
         <div className={styles.teamOverview}>
           <div className={styles.smallHeader}>Meet the team</div>
           <h1 className={styles.teamHeader}>
@@ -140,7 +140,7 @@ const Homepage = () => {
           <img src="person2.png" alt="person2" className={styles.person2Img} />
         </div>
       </section>
-      <section className={styles.sectionClients}>
+      <section id="client"className={styles.sectionClients}>
         <h1 className={styles.clientHeader}>
           “Fast and outstanding resutls. Edie understands their customer’s
           needs. They have a young and talented team.”

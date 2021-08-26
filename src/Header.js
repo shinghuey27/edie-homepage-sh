@@ -1,46 +1,41 @@
-import { useState } from "react";
 import styles from "./header.module.scss";
 import "./App.scss";
-const Header = () => {
-  const [menu, setMenu] = useState(false);
+const Header = (props) => {
 
-  const handleMenuClick = (event) => {
-    setMenu(!menu);
-  };
   return (
       <header className={styles.header}>
         <div className={styles.logoName}>Edie</div>
         <nav>
-          <ul className={menu ? styles.listOverviewOpen : styles.listOverview}>
+          <ul className={props.menu ? styles.listOverviewOpen : styles.listOverview}>
             <li className={styles.list}>
-              <a className={styles.navLink} href="/">
+              <a onClick={props.handleMenuClick} className={styles.navLink} href="#home">
                 Home
               </a>
             </li>
             <li className={styles.list}>
-              <a className={styles.navLink} href="/">
+              <a onClick={props.handleMenuClick} className={styles.navLink} href="#service">
                 Services
               </a>
             </li>
             <li className={styles.list}>
-              <a className={styles.navLink} href="/">
+              <a onClick={props.handleMenuClick} className={styles.navLink} href="#work">
                 Our Works
               </a>
             </li>
             <li className={styles.list}>
-              <a className={styles.navLink} href="/">
+              <a onClick={props.handleMenuClick} className={styles.navLink} href="#client">
                 Clients
               </a>
             </li>
             <li className={styles.list}>
-              <a className={styles.navLink} href="/">
+              <a onClick={props.handleMenuClick} className={styles.navLink} href="#contact">
                 Contact
               </a>
             </li>
           </ul>
           <i
-            onClick={handleMenuClick}
-            className={`${menu ? "fas fa-times" : "fal fa-bars"}`}
+            onClick={props.handleMenuClick}
+            className={`${props.menu? "fas fa-times" : "fal fa-bars"}`}
             />
         </nav>
       </header>
